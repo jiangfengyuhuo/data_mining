@@ -239,7 +239,7 @@ with open('adult.test', 'r')as fin:
             right += 1
         else:
             wrong += 1
-        print("%s%s" %(line[-1], ans))
+        # print("%s%s" %(line[-1], ans))
         line = fin.readline()
 
 print("模型的判断正确的次数：\t%d\n错误的次数\t%d\n正确率:\t%f" % (right, wrong, (right / (right + wrong))))
