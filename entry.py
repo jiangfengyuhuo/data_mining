@@ -39,7 +39,7 @@ class DataSet:
 
 dataset_low = DataSet()
 dataset_high = DataSet()
-with open('/home/find/down/adult.data', 'r')as fin:
+with open('adult.data', 'r')as fin:
     line = fin.readline()
     gain_high = []
     loss_high = []
@@ -222,7 +222,7 @@ def test(line):
 
 print("训练数据的总数：\n >50k\t%d\n<=50k\t%d" % (len(dataset_high.data), len(dataset_low.data)))
 
-with open('/home/find/down/adult.test', 'r')as fin:
+with open('adult.test', 'r')as fin:
     line = fin.readline()
     right = 0
     wrong = 0
