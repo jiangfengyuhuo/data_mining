@@ -179,8 +179,8 @@ dataset_high.classfied_dataset = classfy(dataset_high.gain_mid, dataset_high.los
 def test(line):
     """测试数据"""
     # P(每个元素|收入大于50k)
-    p_low = 0.0
-    p_high = 0.0
+    p_low = 1.0
+    p_high = 1.0
     gain = int(line[-5])
     loss = int(line[-4])
 
@@ -214,6 +214,7 @@ def test(line):
         if node == 'capital_loss':
             line[i] = get_level(loss, dataset_high.loss_mid)
         p_high *= dataset_high.classfied_dataset[node][line[i]] / dataset_high.len_data
+    # print(p_low, p_high)
     if p_low > p_high:
         return '<=50k'
     else:
